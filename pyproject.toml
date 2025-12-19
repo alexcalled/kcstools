@@ -7,8 +7,20 @@ name = "py-template"
 version = "0.0.1"
 description = "Reusable Python packaging + CI scaffold"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 license = { text = "MIT" }
+dependencies = [
+  "torch",
+  "torchvision",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+
 
 [tool.setuptools]
 package-dir = {"" = "src"}
